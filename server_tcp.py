@@ -4,7 +4,7 @@ def signal_handler(signal, frame):
     print("> signal():\tInterrupt by signal %s" % signal)
     sys.exit(0)
 
-#signal.SIGEMT | signal.SIGINFO | signal.SIGFPE | signal.SIGILL | signal.SIGINT | signal.SIGSEGV | signal.SIGTERM | signal.SIGBREAK
+# signal.SIGEMT | signal.SIGINFO | signal.SIGFPE | signal.SIGILL | signal.SIGINT | signal.SIGSEGV | signal.SIGTERM | signal.SIGBREAK
 signal.signal(signal.SIGABRT, signal_handler)
 signal.signal(signal.SIGINT, signal_handler)
 
