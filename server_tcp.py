@@ -92,7 +92,9 @@ def main():
             continue
         
         try:
-            # setting SO_REUSEADDR option forthe created socket for security reasons
+            # setting SO_REUSEADDR option for the created socket for security reasons
+            # Or for better security use the SO_EXCLISIVEADDRUSE option, which requires admin priviliges
+            # s.setsockopt(socket.SOL_SOCKET, socket.SO_EXCLUSIVEADDRUSE, 1)
             s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         except OSError as err:
             print("$ setsockopt():\tSetting option SO_REUSEADDR failed with error: %s" % err)
