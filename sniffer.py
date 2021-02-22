@@ -8,7 +8,6 @@ s.bind((HOST,0))
 s.setsockopt(socket.IPPROTO_IP, socket.IP_HDRINCL, 1)
 s.ioctl(socket.SIO_RCVALL, socket.RCVALL_ON)
 
-f = open("D:\PyTests\dumped.txt", "ab")
-f.write(s.recvfrom(65565).decode())
+print(s.recvfrom(65565))
 
 s.ioctl(socket.SIO_RCVALL, socket.RCVALL_OFF)
