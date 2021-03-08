@@ -1,5 +1,7 @@
 import socket, sys
 
+""" Author: Adnan Hleihel """
+
 # Opritonal signal handler made for testing and fun, you can remove it
 '''
 import signal

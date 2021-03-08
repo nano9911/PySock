@@ -1,5 +1,7 @@
 import threading, socket, sys
 
+""" Author: Adnan Hleihel """
+
 # 0.0.0.0 -> Listens on all interfaces
 ip = "0.0.0.0"
 port = 12345
